@@ -1,6 +1,7 @@
 // HTMLOutliner.js
 function reset(){
-    
+    document.getElementById('direct_input').value = '';
+    document.getElementById('output').innerHTML = '';
 }
 
 // Section class
