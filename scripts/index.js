@@ -1,5 +1,5 @@
 // HTMLOutliner.js
-function reset(){
+function reset() {
     document.getElementById('direct_input').value = '';
     document.getElementById('output').innerHTML = '';
 }
@@ -402,6 +402,7 @@ function outline() {
 
     function printOutline(outline) {
         var ol = document.createElement("ol");
+        // ol.style.all = "initial";
         ol.className = "outline";
         var n = 0;
         for (var i = 0; i < outline.length; i++) {
@@ -435,7 +436,8 @@ function outline() {
         // Section number
         var number = section.number.slice(0);
         var span = document.createElement("span");
-        span.innerHTML = "<span class=\"sec_prefix\"></span>" + number.pop() + ".";
+        // span.style.all = "initial";
+        span.innerHTML = "<span class=\"sec_prefix\" style=\"all:initial;\"></span>" + number.pop() + ".";
         span.className = "sec_number";
         if (number.length > 0) span.firstChild.textContent = number.join(".") + ".";
         li.appendChild(span);
